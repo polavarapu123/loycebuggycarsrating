@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-12T01:23:59.979Z",
+    "end": "2021-03-12T01:24:16.145Z",
+    "duration": 16166,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f657e7a-3473-4d13-b34f-1de2581ca6a5",
+      "title": "",
+      "fullFile": "cypress\\integration\\Buggytests\\login.spec.js",
+      "file": "cypress\\integration\\Buggytests\\login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3bc75a77-f860-44bd-a26f-d18a3f45242a",
+          "title": "Login script for buggycarr",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with valid user",
+              "fullTitle": "Login script for buggycarr Login with valid user",
+              "timedOut": null,
+              "duration": 7751,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(this.data.selector.inputLogin).type(this.data.register.username);\ncy.get(this.data.selector.inputPswd).type(this.data.register.password);\ncy.contains('button', 'Login').click();\ncy.contains('li', 'Hi', +this.data.register.firstname).should('be.visible');\ncy.contains('a', 'Logout').click();",
+              "err": {},
+              "uuid": "21a8e7e3-5691-4acc-8f9c-62fde20b6636",
+              "parentUUID": "3bc75a77-f860-44bd-a26f-d18a3f45242a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with invalid user",
+              "fullTitle": "Login script for buggycarr Login with invalid user",
+              "timedOut": null,
+              "duration": 2708,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var _this = this;\ncy.generateRandomString(10).then(function (user) {\n  cy.get(_this.data.selector.inputLogin).type(user);\n});\ncy.generateRandomString(10).then(function (psd) {\n  cy.get(_this.data.selector.inputPswd).type(psd);\n});\ncy.contains('button', 'Login').click();\ncy.contains('Invalid username/password').should('be.visible');",
+              "err": {},
+              "uuid": "b2319f68-bc7f-4468-9dc9-ec3b1ad7dc10",
+              "parentUUID": "3bc75a77-f860-44bd-a26f-d18a3f45242a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "21a8e7e3-5691-4acc-8f9c-62fde20b6636",
+            "b2319f68-bc7f-4468-9dc9-ec3b1ad7dc10"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10459,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

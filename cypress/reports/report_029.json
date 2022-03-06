@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-06T06:15:07.236Z",
+    "end": "2022-03-06T06:15:42.188Z",
+    "duration": 34952,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53aea789-74e1-41c0-b419-4950bbda05a0",
+      "title": "",
+      "fullFile": "cypress\\integration\\Buggytests\\votes.spec.js",
+      "file": "cypress\\integration\\Buggytests\\votes.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7097d46-2e4b-46be-86ba-538c79b060bd",
+          "title": "Votes script for buggycarr",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to popular make",
+              "fullTitle": "Votes script for buggycarr Navigate to popular make",
+              "timedOut": null,
+              "duration": 10882,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('h2', 'Popular Model').should('be.visible');\ncy.get('[src=\"/img/cars/Lamborghini-Logo.png\"]').click();\ncy.scrollTo('center');\ncy.contains('a', 'Model').should('be.visible');\ncy.contains('a', 'Rank').should('be.visible');\ncy.contains('a', 'Votes').should('be.visible');\ncy.get('.comments').contains('Comments').should('be.visible');\ncy.contains('a', 'Diablo').click();\ncy.url().should('include', '/model');\ncy.contains('You need to be logged in to vote.').should('be.visible');\ncy.get('[src=\"/img/cars/Lamborghini-Logo.png\"]').click();\ncy.url().should('include', '/make');",
+              "err": {},
+              "uuid": "90de4626-487e-45da-8bf2-20c46dd7a883",
+              "parentUUID": "d7097d46-2e4b-46be-86ba-538c79b060bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to popular model",
+              "fullTitle": "Votes script for buggycarr Navigate to popular model",
+              "timedOut": null,
+              "duration": 6860,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('h2', 'Popular Make').should('be.visible');\ncy.get('[src=\"/img/cars/Diablo.jpg\"]').click();\ncy.contains('th', 'Date').should('be.visible');\ncy.contains('th', 'Author').should('be.visible');\ncy.contains('th', 'Comment').should('be.visible');\ncy.url().should('include', '/model');\ncy.contains('You need to be logged in to vote.').should('be.visible');\ncy.get('[src=\"/img/cars/Diablo.jpg\"]').click();\ncy.url().should('eql', 'https://buggy.justtestit.org/');",
+              "err": {},
+              "uuid": "b89540d6-abf2-407b-a19a-d02adee6cea3",
+              "parentUUID": "d7097d46-2e4b-46be-86ba-538c79b060bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to overall rating",
+              "fullTitle": "Votes script for buggycarr Navigate to overall rating",
+              "timedOut": null,
+              "duration": 5179,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('h2', 'Overall Rating').should('be.visible');\ncy.get('[src=\"/img/overall.jpg\"]').click();\ncy.url().should('include', '/overall');\ncy.contains('a', 'Model').should('be.visible');\ncy.contains('a', 'Rank').should('be.visible');\ncy.contains('a', 'Votes').should('be.visible');\ncy.contains('a', 'Engine').should('be.visible');\ncy.get('.comments').contains('Comments').should('be.visible');\ncy.contains('Lamborghini').click();\ncy.url().should('include', '/make');",
+              "err": {},
+              "uuid": "690d3531-a680-42d2-8132-b0262a0d40b8",
+              "parentUUID": "d7097d46-2e4b-46be-86ba-538c79b060bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check vote button enabled only when user logged in and not voted earlier",
+              "fullTitle": "Votes script for buggycarr Check vote button enabled only when user logged in and not voted earlier",
+              "timedOut": null,
+              "duration": 6893,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(this.data.selector.inputLogin).type(this.data.register.username);\ncy.get(this.data.selector.inputPswd).type(this.data.register.password);\ncy.contains('button', 'Login').click();\ncy.contains('h2', 'Overall Rating').should('be.visible');\ncy.get('[src=\"/img/overall.jpg\"]').click();\ncy.url().should('include', '/overall');\ncy.contains('a', 'View more').click();\ncy.contains('button', 'Vote').should('be.visible');",
+              "err": {},
+              "uuid": "73c33446-3465-4010-97d2-3164cc4bf3c1",
+              "parentUUID": "d7097d46-2e4b-46be-86ba-538c79b060bd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90de4626-487e-45da-8bf2-20c46dd7a883",
+            "b89540d6-abf2-407b-a19a-d02adee6cea3",
+            "690d3531-a680-42d2-8132-b0262a0d40b8",
+            "73c33446-3465-4010-97d2-3164cc4bf3c1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29814,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

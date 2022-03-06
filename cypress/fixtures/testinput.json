@@ -1,0 +1,26 @@
+
+{
+    "register": {
+        "username":"Test2022",
+        "password":"T@st2022",
+        "firstname":"Test",
+        "lastname":"2022",
+        "address": "65 Apollo drive",
+        "age": "30",
+        "gender": "Male",
+        "hobby": "Knitting",
+        "phone": "0923457956"
+    },
+
+        
+    "selector": {
+        "inputUsername": "[name=username]",
+        "inputFirstname": "[name=firstName]",
+        "inputLastname": "[name=lastName]",
+        "inputPassword": "[for=password]",
+        "inputConfirmpassword": "[for=confirmPassword]",
+        "inputLogin": "[name=login]",
+        "inputPswd": "[name=password]"
+            }
+}
+    

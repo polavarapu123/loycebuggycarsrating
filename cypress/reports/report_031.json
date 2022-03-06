@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-03-06T06:35:06.905Z",
+    "end": "2022-03-06T06:35:24.150Z",
+    "duration": 17245,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3fb5df57-92bd-4a91-85e8-929402c5e0df",
+      "title": "",
+      "fullFile": "cypress\\integration\\Buggytests\\profile.spec.js",
+      "file": "cypress\\integration\\Buggytests\\profile.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fff4d328-ca9b-44ce-bd2b-a95dff3a65ce",
+          "title": "User Profile script for buggycarr",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update user profile additional details",
+              "fullTitle": "User Profile script for buggycarr Update user profile additional details",
+              "timedOut": null,
+              "duration": 15424,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(this.input.selector.inputLogin).type(this.input.register.username);\ncy.get(this.input.selector.inputPswd).type(this.input.register.password);\ncy.contains('button', 'Login').click();\ncy.contains('a', 'Profile').click();\ncy.get('#gender').type(this.input.register.gender);\ncy.get('#age').type(this.input.register.age);\ncy.get('#address').type(this.input.register.address);\ncy.get('#hobby').select(this.input.register.hobby);\ncy.contains('button', 'Save').click();\ncy.get('.result').contains('The profile has been saved successful').should('be.visible');\ncy.get('#gender').clear();\ncy.get('#age').clear();\ncy.get('#address').clear();\ncy.contains('button', 'Save').click();\ncy.get('.result').contains('The profile has been saved successful').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'The profile has been saved successful' within the element: [ <div.result.alert.alert-danger.hidden-md-down>, 1 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'The profile has been saved successful' within the element: [ <div.result.alert.alert-danger.hidden-md-down>, 1 more... ] but never did.\n    at Context.eval (https://buggy.justtestit.org/__cypress/tests?p=cypress\\integration\\Buggytests\\profile.spec.js:123:73)",
+                "diff": null
+              },
+              "uuid": "8ec4600e-d9c9-49ef-ab62-84f1a2af8f82",
+              "parentUUID": "fff4d328-ca9b-44ce-bd2b-a95dff3a65ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8ec4600e-d9c9-49ef-ab62-84f1a2af8f82"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15424,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
