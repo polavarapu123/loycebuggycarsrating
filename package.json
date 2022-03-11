@@ -10,7 +10,7 @@
     "generate_mochawesome_report": "marge cypress/reports/output.json --reportDir ./ --inline",
     "final_report": "npm run merge && npm run generate_mochawesome_report"
   },
-  "author": "Santhi",
+  "author": "Loyce",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.9.1",
